@@ -1,0 +1,14 @@
+bookstore> db.books.insertOne({title:"The color of magic",author:"Terry",pages:500,genere:"Array",rating:7})
+
+books here is the collection name 
+bookstore is the database
+insertOne - one here refers to one document to be added
+
+
+bookstore> db.books.insertOne({title:"The color of magic",author:"Terry",pages:500,genere:["fanstasy","magic"],rating:7})
+{
+  acknowledged: true,
+  insertedId: ObjectId('68f7b8a35c05b22537cebea4')
+}
+
+NOTE : the collections doesnt have to exist necessarily , we can directly create collections by commanding in mangoDB shell
