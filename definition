@@ -1,0 +1,17 @@
+MangoDB is a database (no sql)
+It uses collections and documents (keys and values)
+documents -> individual records in a specific collection
+  
+Example:
+{
+title: "Name of the wind"
+author:"patrick"
+pages:600
+genere:"array"
+rating:9
+}
+
+Every document has specific unique ID value given by MangoDB itself
+  example : _id: ObjectId('68f7a56c2abc3360554a8806')
+
+
