@@ -1,0 +1,13 @@
+mongosh -> to enter into the shell
+show dbs -> shows database 
+use bookstore -> changing database (bookstore here is a database)
+cls -> clear the screen 
+db -> shows the current database you are currently in 
+show collections -> shows all the collection in that particular database
+
+creating a variable:
+var name = 'yoshi'
+bookstore> yoshi
+
+help-> help command used to show all the commands with the definition 
+exit -> used to exit the shell
