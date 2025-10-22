@@ -1,0 +1,11 @@
+bookstore> db.books.findOne({_id: ObjectId('68f86c1bdcf4428c62cebea5')})
+{
+  _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+  title: 'The rage',
+  author: 'joyce',
+  pages: 400,
+  genere: 'rage',
+  ratings: 8
+}
+
+NOTE: find only one document 
