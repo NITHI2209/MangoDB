@@ -1,0 +1,8 @@
+bookstore> db.books.find({author:"joyce",ratings:8},{title:1,author:1})
+[
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+    title: 'The rage',
+    author: 'joyce'
+  }
+]
