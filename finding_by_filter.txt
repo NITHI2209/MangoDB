@@ -1,0 +1,11 @@
+bookstore> db.books.find({author:"Terry", rating:7})
+[
+  {
+    _id: ObjectId('68f7b8a35c05b22537cebea4'),
+    title: 'The color of magic',
+    author: 'Terry',
+    pages: 500,
+    genere: [ 'fanstasy', 'magic' ],
+    rating: 7
+  }
+]
