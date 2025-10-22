@@ -1,0 +1,38 @@
+bookstore> db.books.find({},{title : 1, author : 1})
+[
+  {
+    _id: ObjectId('68f7a56c2abc3360554a8806'),
+    title: 'Name of the wind',
+    author: 'patrick'
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8808'),
+    title: 'Weather',
+    author: 'nithya sree'
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8809'),
+    title: 'summer',
+    author: 'rocke'
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a880a'),
+    title: 'spring',
+    author: 'nabu'
+  },
+  {
+    _id: ObjectId('68f7b8a35c05b22537cebea4'),
+    title: 'The color of magic',
+    author: 'Terry'
+  },
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea4'),
+    title: 'The new ray',
+    author: 'Niyan'
+  },
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+    title: 'The rage',
+    author: 'joyce'
+  }
+]
