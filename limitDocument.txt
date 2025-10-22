@@ -1,0 +1,27 @@
+bookstore> db.books.find().limit(3)
+[
+  {
+    _id: ObjectId('68f7a56c2abc3360554a8806'),
+    title: 'Name of the wind',
+    author: 'patrick',
+    pages: 600,
+    genere: 'array',
+    rating: 9
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8808'),
+    title: 'Weather',
+    author: 'nithya sree',
+    pages: 900,
+    genere: 'Array',
+    ratings: 8
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8809'),
+    title: 'summer',
+    author: 'rocke',
+    pages: 800,
+    genere: 'Array',
+    ratings: 7
+  }
+]
