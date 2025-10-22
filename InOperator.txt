@@ -1,0 +1,11 @@
+bookstore> db.books.find({ratings:{$in:[7,8,9]}})
+[
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+    title: 'The rage',
+    author: 'joyce',
+    pages: 400,
+    genere: 'rage',
+    ratings: 8
+  }
+]
