@@ -1,0 +1,19 @@
+bookstore> db.books.find({ratings:{$gt:7}})
+[
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea4'),
+    title: 'The new ray',
+    author: 'Niyan',
+    pages: 250,
+    genere: 'romantic',
+    ratings: 10
+  },
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+    title: 'The rage',
+    author: 'joyce',
+    pages: 400,
+    genere: 'rage',
+    ratings: 8
+  }
+]
