@@ -1,0 +1,2 @@
+bookstore> db.books.deleteMany({author:"Brandon Sanderson"})
+{ acknowledged: true, deletedCount: 1 }
