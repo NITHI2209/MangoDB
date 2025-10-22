@@ -1,0 +1,8 @@
+bookstore> db.books.updateOne({_id: ObjectId('68f87da4dcf4428c62cebea6')},{$push:{genres:"fantasy"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
