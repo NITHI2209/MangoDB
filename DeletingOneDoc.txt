@@ -1,0 +1,2 @@
+bookstore> db.books.deleteOne({ _id: ObjectId('68f8806cdcf4428c62cebea7')})
+{ acknowledged: true, deletedCount: 1 }
