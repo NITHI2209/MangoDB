@@ -1,0 +1,4 @@
+-> less than 7
+bookstore> db.books.find({ratings:{$lt:7}})
+-> less than or equal to 7
+bookstore> db.books.find({ratings:{$lte:7}})
