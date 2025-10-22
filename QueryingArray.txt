@@ -2,3 +2,10 @@ bookstore> db.books.find({genres:"fantasy"})
 NOTE -> Shows all the document with fantasy present
 bookstore> db.books.find({genres:["fantasy"]})
 NOTE-> shows document only fastasy is there
+
+bookstore>db.books.find({genres:{$all:["fantasy","sci-fi"]}})
+NOTE-> shows all the document where fantasy and sci-fi is present
+
+nested doc:
+bookstore>db.books.find({"reviews.name":"luigi"})
+NOTE-> name is nested document of review 
