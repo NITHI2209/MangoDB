@@ -1,0 +1,4 @@
+bookstore> db.books.find().count()
+7
+bookstore> db.books.find({author:"joyce"}).count()
+1
