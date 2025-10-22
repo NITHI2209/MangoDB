@@ -1,0 +1,8 @@
+bookstore> db.books.updateOne({_id: ObjectId('68f86c1bdcf4428c62cebea5')},{$set:{author:"joyce anglin"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
