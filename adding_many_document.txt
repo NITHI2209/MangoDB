@@ -1,0 +1,8 @@
+bookstore> db.books.insertMany([{title : "The new ray", author:"Niyan", pages:250, genere:"romantic", ratings: 10},{title: "The rage", author :"joyce", pages: 400, genere :"rage", ratings: 8}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('68f86c1bdcf4428c62cebea4'),
+    '1': ObjectId('68f86c1bdcf4428c62cebea5')
+  }
+}
