@@ -1,0 +1,59 @@
+bookstore> db.books.find().sort({title:-1})
+[
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8809'),
+    title: 'summer',
+    author: 'rocke',
+    pages: 800,
+    genere: 'Array',
+    ratings: 7
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a880a'),
+    title: 'spring',
+    author: 'nabu',
+    pages: 400,
+    genere: 'Array',
+    ratings: 6
+  },
+  {
+    _id: ObjectId('68f7a65e2abc3360554a8808'),
+    title: 'Weather',
+    author: 'nithya sree',
+    pages: 900,
+    genere: 'Array',
+    ratings: 8
+  },
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea5'),
+    title: 'The rage',
+    author: 'joyce',
+    pages: 400,
+    genere: 'rage',
+    ratings: 8
+  },
+  {
+    _id: ObjectId('68f86c1bdcf4428c62cebea4'),
+    title: 'The new ray',
+    author: 'Niyan',
+    pages: 250,
+    genere: 'romantic',
+    ratings: 10
+  },
+  {
+    _id: ObjectId('68f7b8a35c05b22537cebea4'),
+    title: 'The color of magic',
+    author: 'Terry',
+    pages: 500,
+    genere: [ 'fanstasy', 'magic' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId('68f7a56c2abc3360554a8806'),
+    title: 'Name of the wind',
+    author: 'patrick',
+    pages: 600,
+    genere: 'array',
+    rating: 9
+  }
+]
