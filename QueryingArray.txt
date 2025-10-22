@@ -1,0 +1,4 @@
+bookstore> db.books.find({genres:"fantasy"})
+NOTE -> Shows all the document with fantasy present
+bookstore> db.books.find({genres:["fantasy"]})
+NOTE-> shows document only fastasy is there
