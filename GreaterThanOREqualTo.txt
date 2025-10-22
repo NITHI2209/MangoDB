@@ -1,0 +1,1 @@
+bookstore> db.books.find({ratings:{$gte:7}})
