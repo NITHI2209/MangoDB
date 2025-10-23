@@ -1,0 +1,22 @@
+BASIC SYNTAX:
+db.collection.aggregate([
+  { $limit: <number_of_documents> }
+])
+EXAMPLE:
+employee> db.worker.aggregate([{$limit:2}])
+[
+  {
+    _id: ObjectId('68fa3ae22d0703e856cebea4'),
+    name: 'NITHYASREE',
+    age: 22,
+    salary: 50000,
+    Dept: 'DS'
+  },
+  {
+    _id: ObjectId('68fa3ae22d0703e856cebea5'),
+    name: 'JAYASREE',
+    age: 26,
+    salary: 90000,
+    Dept: 'cyberark'
+  }
+]
