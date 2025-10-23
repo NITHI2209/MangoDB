@@ -1,0 +1,17 @@
+employee> db.worker.aggregate([{$match:{salary:{$gt:60000}}}])
+[
+  {
+    _id: ObjectId('68fa3ae22d0703e856cebea5'),
+    name: 'JAYASREE',
+    age: 26,
+    salary: 90000,
+    Dept: 'cyberark'
+  },
+  {
+    _id: ObjectId('68fa3ae22d0703e856cebea6'),
+    name: 'JAYANTHI',
+    age: 27,
+    salary: 70000,
+    Dept: 'Business'
+  }
+]
