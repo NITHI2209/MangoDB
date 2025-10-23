@@ -1,0 +1,18 @@
+$UNWIND:Splits an array field into multiple documents, one per array element.
+Each element of the array becomes a separate document
+DOCUMENT:
+{
+  name: "NITHYASREE",
+  skills: ["Python", "MongoDB", "SQL"]
+}
+
+SYNTAX:
+db.worker.aggregate([
+  { $unwind: "$skills" }
+])
+OUTPUT:
+[
+  { "name": "NITHYASREE", "skills": "Python" },
+  { "name": "NITHYASREE", "skills": "MongoDB" },
+  { "name": "NITHYASREE", "skills": "SQL" }
+]
