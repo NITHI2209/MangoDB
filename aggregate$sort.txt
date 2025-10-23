@@ -1,0 +1,4 @@
+db.worker.aggregate([
+  { $sort: { salary: -1 } },  // sort descending by salary
+  { $limit: 2 }               // take only 2 documents
+])
