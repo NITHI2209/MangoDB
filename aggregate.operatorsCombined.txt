@@ -1,0 +1,2 @@
+employee> db.worker.aggregate([{$match:{salary:{$gt:60000}}},{$group:{_id:"Dept",maxsalary:{$max:"$salary"}}}])
+[ { _id: 'Dept', maxsalary: 90000 } ]
