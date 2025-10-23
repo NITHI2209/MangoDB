@@ -1,0 +1,15 @@
+BASIC SYNTAX:
+db.collection.aggregate([
+  { $skip: <number_of_documents_to_skip> }
+])
+EXAMPLE:
+employee> db.worker.aggregate([{$skip:2}])
+[
+  {
+    _id: ObjectId('68fa3ae22d0703e856cebea6'),
+    name: 'JAYANTHI',
+    age: 27,
+    salary: 70000,
+    Dept: 'Business'
+  }
+]
