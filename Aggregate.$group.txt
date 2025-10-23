@@ -1,0 +1,17 @@
+db.collection.aggregate([
+  {
+    $group: {
+      _id: "<field_to_group_by>",     // the field you want to group by
+      total: { $sum: "<numeric_field>" },  // sum of a field
+      average: { $avg: "<numeric_field>" }, // average of a field
+      maxValue: { $max: "<numeric_field>" }, // max value of a field
+      minValue: { $min: "<numeric_field>" }, // min value of a field
+      count: { $sum: 1 }              // count of items in the group
+    }
+  }
+])
+
+
+EXAMPLE:
+employee> db.worker.aggregate([{$group: {_id:"Dept",avgsalary:{$avg:"$salary"},count:{$sum:1}}}])
+[ { _id: 'Dept', avgsalary: 70000, count: 3 } ]
