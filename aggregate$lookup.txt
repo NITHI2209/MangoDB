@@ -1,0 +1,10 @@
+db.movies.aggregate([
+  {
+    $lookup: {
+      from: "actors",        // collection to join
+      localField: "actor_id", // field in movies
+      foreignField: "_id",    // field in actors
+      as: "actor_details"     // new field in output
+    }
+  }
+]);
