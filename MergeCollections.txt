@@ -1,0 +1,23 @@
+db.appointments.aggregate([
+  // Join patients
+  {
+    $lookup: {
+      from: "patients",
+      localField: "patient_id",
+      foreignField: "_id",
+      as: "patient_details"
+    }
+  },
+  { $unwind: "$patient_details" },
+
+  // Join doctors
+  {
+    $lookup: {
+      from: "doctors",
+      localField: "doctor_id",
+      foreignField: "_id",
+      as: "doctor_details"
+    }
+  },
+  { $unwind: "$doctor_details" }
+])
