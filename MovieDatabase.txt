@@ -1,0 +1,117 @@
+MovieCollection:
+db.MovieCollection.insertOne({
+  _id: 1,
+  title: "Mersal",
+  release_year: 2017,
+  genre: ["Action", "Thriller", "Drama"],
+  language: "Tamil",
+  dubbed_languages: ["Telugu", "Hindi", "Kannada"],
+  duration: "171 mins",
+  director_id: 201,
+  cast_ids: [101, 102, 103, 104],
+  production_company_id: 301,
+  song_ids: [401, 402, 403, 404],
+  budget: "100cr",
+  box_office: "260cr",
+  rating: 8.5
+});
+
+ActorCollection:
+db.ActorsCollection.insertMany([
+  {
+    _id: 101,
+    name: "Vijay",
+    dob: "1974-06-22",
+    gender: "Male",
+    role_in_movie: "Dr. Maaran / Vet / Magician",
+    movies_ids: [1],
+    awards_won: ["Tamil Nadu State Film Award", "Vijay Awards"],
+    nationality: "Indian",
+    filmography: ["Mersal", "Thuppakki", "Sarkar"]
+  },
+  {
+    _id: 102,
+    name: "Nithya Menen",
+    dob: "1988-04-18",
+    gender: "Female",
+    role_in_movie: "Dr. Shweta",
+    movies_ids: [1],
+    awards_won: ["Filmfare Award South", "SIIMA Award"],
+    nationality: "Indian",
+    filmography: ["Mersal", "OK Kanmani", "Bangalore Days"]
+  },
+  {
+    _id: 103,
+    name: "Samantha Akkineni",
+    dob: "1987-04-28",
+    gender: "Female",
+    role_in_movie: "Aarfa / Ex-police officer",
+    movies_ids: [1],
+    awards_won: ["Filmfare Award South", "SIIMA Award"],
+    nationality: "Indian",
+    filmography: ["Mersal", "Theri", "Rangasthalam"]
+  },
+  {
+    _id: 104,
+    name: "Kajal Aggarwal",
+    dob: "1985-06-19",
+    gender: "Female",
+    role_in_movie: "Special Appearance in Song",
+    movies_ids: [1],
+    awards_won: ["Filmfare Award South", "SIIMA Award"],
+    nationality: "Indian",
+    filmography: ["Mersal", "Magadheera", "Singham"]
+  }
+]);
+
+ProductionCompany:
+db.ProductionCompany.insertOne({
+  _id: 301,
+  name: "Thenandal Studio Limited",
+  founder: "S. Thanu",
+  headquarters: "Chennai, India",
+  founded_year: 1978,
+  movies_produced_ids: [1],
+  notable_movies: ["Mersal", "I", "Enthiran"]
+});
+
+DirectorDetails:
+db.DirectorDetails.insertOne({
+  _id: 201,
+  name: "Atlee Kumar",
+  dob: "1986-09-21",
+  gender: "Male",
+  nationality: "Indian",
+  movies_directed_ids: [1, 2, 3],
+  notable_movies: ["Mersal", "Theri", "Bigil"],
+  awards_won: ["SIIMA Award for Best Director", "Vijay Award"]
+});
+
+
+SongCollection:
+db.SongCollection.insertMany([
+  {
+    _id: 401,
+    title: "Aalaporaan Thamizhan",
+    movie_id: 1,
+    singers: ["Vijay", "Kapil"],
+    duration: "4:30",
+    genre: "Tamil Folk / Dance"
+  },
+  {
+    _id: 402,
+    title: "Mersal Arasan",
+    movie_id: 1,
+    singers: ["Vijay"],
+    duration: "5:00",
+    genre: "Action"
+  },
+  {
+    _id: 403,
+    title: "Devi Prayer",
+    movie_id: 1,
+    singers: ["Shreya Ghosal", "Kailash Kher"],
+    duration: "3:45",
+    genre: "Devotional / Background"
+  }
+]);
