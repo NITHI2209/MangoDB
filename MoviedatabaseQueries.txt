@@ -1,0 +1,152 @@
+1) movie> db.MovieCollection.aggregate([{$lookup:{from:"ProductionCompany",localField:"production_company_id",foreignField:"_id",as: "production_details"}},{$unwind: "$production_details"}])
+[
+  {
+    _id: 1,
+    title: 'Mersal',
+    release_year: 2017,
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    language: 'Tamil',
+    dubbed_language: [ 'Telugu', 'Hindi', 'Kannada' ],
+    duration: '171 mins',
+    director_id: 201,
+    cast_ids: [ 101, 102, 103, 104 ],
+    production_company_id: 301,
+    song_ids: [ 401, 402, 403 ],
+    budget: '100cr',
+    box_office: '260cr',
+    rating: 8.5,
+    singer_id: [ 501, 502, 503, 504 ],
+    production_details: {
+      _id: 301,
+      name: 'Thenandal Studio Limited',
+      founder: 'S. Thanu',
+      headquarters: 'Chennai, India',
+      founded_year: 1978,
+      movies_produced_ids: [ 1 ],
+      notable_movies: [ 'Mersal', 'I', 'Enthiran' ]
+    }
+  }
+]
+
+
+2)movie> db.MovieCollection.aggregate([{$lookup:{from:"ActorsCollection", localField:"cast_ids",foreignField:"_id",as:"actor_details"}},{$unwind:"$actor_details"}])
+[
+  {
+    _id: 1,
+    title: 'Mersal',
+    release_year: 2017,
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    language: 'Tamil',
+    dubbed_language: [ 'Telugu', 'Hindi', 'Kannada' ],
+    duration: '171 mins',
+    director_id: 201,
+    cast_ids: [ 101, 102, 103, 104 ],
+    production_company_id: 301,
+    song_ids: [ 401, 402, 403 ],
+    budget: '100cr',
+    box_office: '260cr',
+    rating: 8.5,
+    singer_id: [ 501, 502, 503, 504 ],
+    actor_details: {
+      _id: 101,
+      name: 'Vijay',
+      dob: '1974-06-22',
+      gender: 'Male',
+      role_in_movie: 'Dr.Maaran/vet/Magician',
+      movies_ids: [ 1 ],
+      awards_won: [ 'Tamil Nadu state Film Award', 'Vijay Awards' ],
+      nationality: 'Indian',
+      filmography: [ 'Mersal', 'Thuppakki', 'sarkar' ]
+    }
+  },
+  {
+    _id: 1,
+    title: 'Mersal',
+    release_year: 2017,
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    language: 'Tamil',
+    dubbed_language: [ 'Telugu', 'Hindi', 'Kannada' ],
+    duration: '171 mins',
+    director_id: 201,
+    cast_ids: [ 101, 102, 103, 104 ],
+    production_company_id: 301,
+    song_ids: [ 401, 402, 403 ],
+    budget: '100cr',
+    box_office: '260cr',
+    rating: 8.5,
+    singer_id: [ 501, 502, 503, 504 ],
+    actor_details: {
+      _id: 102,
+      name: 'Nithya Menen',
+      dob: '1988-04-18',
+      gender: 'Female',
+      role_in_movie: 'Dr.shweta',
+      movies_ids: [ 1 ],
+      awards_won: [ 'Filmfare Award South', 'SIMA Awards' ],
+      nationality: 'Indian',
+      filmography: [ 'Mersal', 'OK Kanmani', 'Bangalore Days' ]
+    }
+  },
+  {
+    _id: 1,
+    title: 'Mersal',
+    release_year: 2017,
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    language: 'Tamil',
+    dubbed_language: [ 'Telugu', 'Hindi', 'Kannada' ],
+    duration: '171 mins',
+    director_id: 201,
+    cast_ids: [ 101, 102, 103, 104 ],
+    production_company_id: 301,
+    song_ids: [ 401, 402, 403 ],
+    budget: '100cr',
+    box_office: '260cr',
+    rating: 8.5,
+    singer_id: [ 501, 502, 503, 504 ],
+    actor_details: {
+      _id: 103,
+      name: 'Samantha Akkineni',
+      dob: '1987-04-28',
+      gender: 'Female',
+      role_in_movie: 'Aarfa',
+      movies_ids: [ 1 ],
+      awards_won: [ 'Filmfare Award South', 'SIMA Awards' ],
+      nationality: 'Indian',
+      filmography: [ 'Mersal', 'Theri', 'Rangasthalam' ]
+    }
+  },
+  {
+    _id: 1,
+    title: 'Mersal',
+    release_year: 2017,
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    language: 'Tamil',
+    dubbed_language: [ 'Telugu', 'Hindi', 'Kannada' ],
+    duration: '171 mins',
+    director_id: 201,
+    cast_ids: [ 101, 102, 103, 104 ],
+    production_company_id: 301,
+    song_ids: [ 401, 402, 403 ],
+    budget: '100cr',
+    box_office: '260cr',
+    rating: 8.5,
+    singer_id: [ 501, 502, 503, 504 ],
+    actor_details: {
+      _id: 104,
+      name: 'Kajal Aggarwal',
+      dob: '1985-06-19',
+      gender: 'Female',
+      role_in_movie: 'Specail apperance in song',
+      movies_ids: [ 1 ],
+      awards_won: [ 'Filmfare Award South', 'SIMA Awards' ],
+      nationality: 'Indian',
+      filmography: [ 'Mersal', 'Magadheera', 'Singham' ]
+    }
+  }
+]
+
+
+
+
+
+
