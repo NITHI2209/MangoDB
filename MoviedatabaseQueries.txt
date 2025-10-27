@@ -145,6 +145,16 @@
   }
 ]
 
+3)movie> db.MovieCollection.aggregate([{$lookup:{from:"ProductionCompany",localField:"production_company_id",foreignField:"_id",as: "production_details"}},{$unwind: "$production_details"},{$project:{_id:0, title:1, relase_year:1,genre:1,production_company_name:"production_details.name",production_founded_year:"production_details.founded_year",production_headquartes:"production_details.headquarters"}}])
+[
+  {
+    title: 'Mersal',
+    genre: [ 'Action', 'Thriller', 'Drama' ],
+    production_company_name: 'production_details.name',
+    production_founded_year: 'production_details.founded_year',
+    production_headquartes: 'production_details.headquarters'
+  }
+]
 
 
 
