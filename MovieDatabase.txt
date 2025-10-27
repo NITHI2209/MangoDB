@@ -115,3 +115,47 @@ db.SongCollection.insertMany([
     genre: "Devotional / Background"
   }
 ]);
+
+
+SingerCollection:
+ db.SingerCollection.insertMany([
+   {
+     _id: 501,
+     name: "Vijay",
+     gender: "Male",
+     age: 49,
+     nationality: "Indian",
+     language_specialization: ["Tamil"],
+     role: "Actor / Playback Singer",
+     awards: ["Vijay Award for Favourite Song"],
+     famous_songs: ["Selfie Pulla", "Aalaporaan Thamizhan", "Google Google"]
+   },
+   {
+     _id: 502,
+     name: "Kapil Kapilan",
+     gender: "Male",
+    nationality: "Indian"     language_specialization: ["Tamil", "Malayalam"],
+    famous_songs: ["Aalaporaan Thamizhan", "Marakkuma Nenjam"],     debut_year: 2013
+   },
+   {
+     _id: 503,
+     name: "Shreya Ghoshal",
+     gender: "Female",
+     age: 40,
+     nationality: "Indian",
+     language_specialization: ["Hindi", "Tamil", "Telugu", "Malayalam"],
+     awards: ["National Film Award", "Filmfare Award"],
+     famous_songs: ["Neethanae", "Teri Ore", "Agar Tum Mil Jao"]
+   },
+   {
+     _id: 504,
+     name: "Kailash Kher",
+     gender: "Male",
+     age: 51,
+     nationality: "Indian",
+     language_specialization: ["Hindi", "Tamil", "Telugu"],
+     genre: ["Sufi", "Folk", "Rock"],
+     awards: ["Padma Shri", "Filmfare Award"],
+     famous_songs: ["Allah Ke Bande", "Teri Deewani", "Mersal Arasan"]
+   }
+ ]);
