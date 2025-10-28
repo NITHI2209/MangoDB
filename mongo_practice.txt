@@ -59,7 +59,8 @@ mongo_practice> db.movies.insertMany([{title:"The Hobbit: An Unexpected Journey"
                                       {title:"The Hobbit:The Battle of the Five Armies", writer:"J.R.R. Tolkein", year:2012, franchise:"The Hobbit", synopsis:"Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."}])
 mongo_practice> db.movies.insertMany([{title:"Pee Wee Herman's Big Adventure"},{title:"Avatar"}])
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Queries:
-1) db.movies.find() -> shows all the documents in the collection
+1) shows all the documents in the collection 
+db.movies.find() 
 [
   {
     _id: ObjectId('6900c073ba6051efd3cebea4'),
@@ -110,7 +111,8 @@ mongo_practice> db.movies.insertMany([{title:"Pee Wee Herman's Big Adventure"},{
   },
   { _id: ObjectId('6900d4efba6051efd3cebeab'), title: 'Avatar' }
 ]
-2) db.movies.find({writer:"Quentin Tarantino"}) -> find all the documents that writer name is "Quentin Tarationo"
+2)find all the documents that writer name is "Quentin Tarationo" 
+db.movies.find({writer:"Quentin Tarantino"}) 
 [
   {
     _id: ObjectId('6900c073ba6051efd3cebea6'),
@@ -120,5 +122,109 @@ mongo_practice> db.movies.insertMany([{title:"Pee Wee Herman's Big Adventure"},{
     actors: [ 'Brad Pitt', 'Diane kruger', 'Eli Roth' ]
   }
 ]
-3)
+3)get all documents where actors include "Brad Pitt"
+db.movies.find({actors:"Brad Pitt"})
+[
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea4'),
+    title: 'Fight club',
+    writer: 'Chuck Palahniuk',
+    year: 1999,
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea6'),
+    title: 'Inglorious Basterds',
+    writer: 'Quentin Tarantino',
+    year: 2009,
+    actors: [ 'Brad Pitt', 'Diane kruger', 'Eli Roth' ]
+  }
+]
+4)get all documents with franchise set to "The Hobbit"
+db.movies.find({franchise:"The Hobbit"})
+[
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea7'),
+    title: 'The Hobbit: An Unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: 2012,
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea8'),
+    title: 'The Hobbit: An Unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: 2013,
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea9'),
+    title: 'The Hobbit:The Battle of the Five Armies',
+    writer: 'J.R.R. Tolkein',
+    year: 2012,
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  }
+]
+5)get all movies released in the 90s
+ db.movies.find({year:{$gte:1900,$lt:2000}})
+[
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea4'),
+    title: 'Fight club',
+    writer: 'Chuck Palahniuk',
+    year: 1999,
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea5'),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantiono',
+    year: 1994,
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  }
+]
+6)get all movies released before the year 2000 or after 2010
+mongo_practice> db.movies.find({$or:[{year:{$lt:2000}},{year:{$gt:2010}}]})
+[
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea4'),
+    title: 'Fight club',
+    writer: 'Chuck Palahniuk',
+    year: 1999,
+    actors: [ 'Brad Pitt', 'Edward Norton' ]
+  },
+  {
+    _id: ObjectId('6900c073ba6051efd3cebea5'),
+    title: 'Pulp Fiction',
+    writer: 'Quentin Tarantiono',
+    year: 1994,
+    actors: [ 'John Travolta', 'Uma Thurman' ]
+  },
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea7'),
+    title: 'The Hobbit: An Unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: 2012,
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea8'),
+    title: 'The Hobbit: An Unexpected Journey',
+    writer: 'J.R.R. Tolkein',
+    year: 2013,
+    franchise: 'The Hobbit'
+  },
+  {
+    _id: ObjectId('6900d3ffba6051efd3cebea9'),
+    title: 'The Hobbit:The Battle of the Five Armies',
+    writer: 'J.R.R. Tolkein',
+    year: 2012,
+    franchise: 'The Hobbit',
+    synopsis: 'Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness.'
+  }
+]
+
+
+
 
