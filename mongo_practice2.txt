@@ -1,0 +1,113 @@
+Insert the following documents into a users collection
+db.users.insertMany([{_id:1,username:"GoodGuyGreg", first_name:"Good Guy", last_name:"Greg"},
+{_id:2, username:"ScumbagSteve", fullname:{first: "Scumbag", last:"Steve"}}])
+db.users.find()
+[
+  {
+    _id: 1,
+    username: 'GoodGuyGreg',
+    first_name: 'Good Guy',
+    last_name: 'Greg'
+  },
+  {
+    _id: 2,
+    username: 'ScumbagSteve',
+    fullname: { first: 'Scumbag', last: 'Steve' }
+  }
+]
+
+Insert the following documents into a posts collection
+ db.posts.insertMany([{username:"GoodGuyGreg", title:"Passes out at Party", body:"Raises your credit score"},
+{ username:"GoodGuyGreg", title:"Steals your identity", body:"Raises your credit score"},
+{username:"GoodGuyGreg", title:"Reports a bug in your code", body:"Sends you a pull request"},
+{ username:"ScumbagSteve", title:"Borrows something", body:"Sells it"},
+{ username:"ScumbagSteve", title:"Borrows everything", body:"The end"},
+{username:"ScumbagSteve", title:"Forks your repo on github", body:"Sets to private"}])
+
+mongo_practice> db.posts.find()
+[
+  {
+    _id: ObjectId('69037adeaa728d688fcebea4'),
+    username: 'GoodGuyGreg',
+    title: 'Passes out at Party',
+    body: 'Raises your credit score'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea5'),
+    username: 'GoodGuyGreg',
+    title: 'Steals your identity',
+    body: 'Raises your credit score'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea6'),
+    username: 'GoodGuyGreg',
+    title: 'Reports a bug in your code',
+    body: 'Sends you a pull request'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea7'),
+    username: 'ScumbagSteve',
+    title: 'Borrows something',
+    body: 'Sells it'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea8'),
+    username: 'ScumbagSteve',
+    title: 'Borrows everything',
+    body: 'The end'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea9'),
+    username: 'ScumbagSteve',
+    title: 'Forks your repo on github',
+    body: 'Sets to private'
+  }
+]
+
+Insert the following documents into a comments collection
+ db.comments.insertMany{[{ username:"GoodGuyGreg", comment:"Hope you got a good deal!", post:ObjectId("5ca0b7e96435f98b5901f463")},
+{ username:"GoodGuyGreg", comment:"Hope you got a good deal!", post:ObjectId("5ca0b7e96435f98b5901f463")},
+{username:"GoodGuyGreg", comment:"Don't violate the licensing agreement!", post:ObjectId("5ca0b8766435f98b5901f467")},
+{username:"ScumbagSteve", comment:"It still isn't clean", post:ObjectId("5ca0b8546435f98b5901f466")},
+{username:"ScumbagSteve", comment:"Denied your PR cause I found a hack", post:ObjectId("5ca0b9256435f98b5901f469")}]}
+
+ db.posts.find()
+[
+  {
+    _id: ObjectId('69037adeaa728d688fcebea4'),
+    username: 'GoodGuyGreg',
+    title: 'Passes out at Party',
+    body: 'Raises your credit score'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea5'),
+    username: 'GoodGuyGreg',
+    title: 'Steals your identity',
+    body: 'Raises your credit score'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea6'),
+    username: 'GoodGuyGreg',
+    title: 'Reports a bug in your code',
+    body: 'Sends you a pull request'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea7'),
+    username: 'ScumbagSteve',
+    title: 'Borrows something',
+    body: 'Sells it'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea8'),
+    username: 'ScumbagSteve',
+    title: 'Borrows everything',
+    body: 'The end'
+  },
+  {
+    _id: ObjectId('69037adeaa728d688fcebea9'),
+    username: 'ScumbagSteve',
+    title: 'Forks your repo on github',
+    body: 'Sets to private'
+  }
+]
+
