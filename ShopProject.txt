@@ -385,4 +385,75 @@ db.inventory.insertMany([
  ])
 
 PROFIT COLLECTION:
+ {
+     _id: 301,
+     product_name: "Apple",
+     category: "Fruit",
+     sold_quantity: "5kg",
+     price_per_kg: 70,
+     cost_price: 49,
+     total_profit: (70 - 49) * 5, 
+     date_calculated: "2025-03-03"
+   },
+   {
+     _id: 302,
+     product_name: "Mango",
+     category: "Fruit",
+     sold_quantity: "3kg",
+     price_per_kg: 80,
+     cost_price: 56,
+     total_profit: (80 - 56) * 3, 
+     date_calculated: "2025-03-03"
+   },
+   {
+     _id: 303,
+     product_name: "Muskmelon",
+     category: "Fruit",
+     sold_quantity: "2kg",
+     price_per_kg: 60,
+     cost_price: 42,
+     total_profit: (60 - 42) * 2, 
+     date_calculated: "2025-03-03"
+   },
+   {
+     _id: 304,
+     product_name: "Watermelon",
+     category: "Fruit",
+     sold_quantity: "4kg",
+     price_per_kg: 40,
+     cost_price: 28,
+     total_profit: (40 - 28) * 4, 
+     date_calculated: "2025-03-03"
+   },
+   {
+     _id: 305,
+     product_name: "Orange",
+     category: "Fruit",
+     sold_quantity: "5kg",
+     price_per_kg: 100,
+     cost_price: 70,
+     total_profit: (100 - 70) * 5, 
+     date_calculated: "2025-03-04"
+   },
+   {
+     _id: 306,
+     product_name: "Tomato",
+     category: "Vegetable",
+     sold_quantity: "5kg",
+     price_per_kg: 40,
+     cost_price: 28,
+     total_profit: (40 - 28) * 5, // 60
+     date_calculated: "2025-03-05"
+   },
+   {
+     _id: 307,
+     product_name: "Onion",
+     category: "Vegetable",
+     sold_quantity: "3kg",
+     price_per_kg: 60,
+     cost_price: 42,
+     total_profit: (60 - 42) * 3, // 54
+     date_calculated: "2025-03-05"
+   }
+ ])
 
