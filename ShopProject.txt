@@ -1,0 +1,301 @@
+SHOP COLLECTION:(Items in the shop)
+ db.shop.find()
+[
+  {
+    _id: ObjectId('68fb86bbaad406de4dcebea4'),
+    quantity_bought: '20kg',
+    location: 'Kashmir',
+    price_per_kg: 70,
+    quality: 'TopQuality',
+    Date: '2025-03-01',
+    Exp_Date: '2025-03-05',
+    Name_fruit: 'Apple',
+    cost_price_per_kg: 49
+  },
+  {
+    _id: ObjectId('68fb86bbaad406de4dcebea5'),
+    quantity_bought: '15kg',
+    location: 'Gujarat',
+    price_per_kg: 50,
+    quality: 'Medium',
+    Date: '2025-03-01',
+    Exp_Date: '2025-03-05',
+    Insurance: '90%',
+    Name_fruit: 'Apple2',
+    cost_price_per_kg: 45
+  },
+  {
+    _id: ObjectId('68fb86bbaad406de4dcebea6'),
+    quantity_bought: '10kg',
+    location: 'odisaa',
+    price_per_kg: 100,
+    quantity: 'Top',
+    Date: '2025-03-02',
+    Name_fruit: 'orange'
+  },
+  {
+    _id: ObjectId('68fb86bbaad406de4dcebea7'),
+    quantity_bought: '15kg',
+    location: 'salem',
+    price_per_kg: 80,
+    quality: 'Top',
+    Date: '2025-03-02',
+    Exp_Date: '2025-03-05',
+    Insurance: '70%',
+    Name_fruit: 'Mango',
+    cost_price_per_kg: 56
+  },
+  {
+    _id: ObjectId('68fb86bbaad406de4dcebea8'),
+    quantity_bought: '8kg',
+    location: 'Kerla',
+    price_per_kg: 60,
+    quality: 'Medium',
+    Date: '2025-03-01',
+    Exp_Date: '2025-03-05',
+    Insurance: '50%',
+    Name_fruit: 'Muskmelon',
+    cost_price_per_kg: 45
+  },
+  {
+    _id: ObjectId('68fb87acaad406de4dcebea9'),
+    quantity_bought: '18kg',
+    location: 'TN',
+    price_per_kg: 40,
+    quality: 'Top',
+    Date: '2025-03-02',
+    Exp_Date: '2025-03-05',
+    Name_fruit: 'Watermelon',
+    cost_price_per_kg: 30
+  },
+  {
+    _id: ObjectId('68fb89d8aad406de4dcebeaa'),
+    quantity_bought: '10kg',
+    location: 'TN',
+    price_per_kg: 40,
+    quality: 'Top',
+    Date: '2025-03-05',
+    Exp_Date: '2025-03-09',
+    Name_veg: 'Tomato',
+    cost_price_per_kg: 28
+  },
+  {
+    _id: ObjectId('68fb8d16aad406de4dcebeab'),
+    quantity_bought: '10kg',
+    location: 'TN',
+    price_per_kg: 60,
+    quality: 'Top',
+    Date: '2025-03-05',
+    Exp_Date: '2025-03-09',
+    Name_veg: 'Onion',
+    cost_price_per_kg: 45
+  }
+]
+
+SUPPLIER COLLECTION:
+
+ db.suppliersCollection.find()
+[
+  {
+    _id: 1,
+    supplier_name: 'Himalayan Fresh Produce',
+    location: 'Kashmir',
+    contact_no: '9876543210',
+    items_supplied: [ 'Apple', 'Apple2' ],
+    delivery_date: '2025-03-01',
+    total_quantity: '35kg',
+    payment_status: 'Paid',
+    rating: 'A+'
+  },
+  {
+    _id: 2,
+    supplier_name: 'Odisha Agro Traders',
+    location: 'Bhubaneswar, Odisha',
+    contact_no: '9898877665',
+    items_supplied: [ 'Orange' ],
+    delivery_date: '2025-03-02',
+    total_quantity: '10kg',
+    payment_status: 'Paid',
+    rating: 'A'
+  },
+  {
+    _id: 3,
+    supplier_name: 'Tropical Harvest Exports',
+    location: 'Salem, Tamil Nadu',
+    contact_no: '9823412345',
+    items_supplied: [ 'Mango', 'Watermelon' ],
+    delivery_date: '2025-03-02',
+    total_quantity: '33kg',
+    payment_status: 'Pending',
+    rating: 'A'
+  },
+  {
+    _id: 4,
+    supplier_name: 'FarmFresh Vegetables Co.',
+    location: 'Chennai, Tamil Nadu',
+    contact_no: '9812312312',
+    items_supplied: [ 'Tomato', 'Onion' ],
+    delivery_date: '2025-03-05',
+    total_quantity: '20kg',
+    payment_status: 'Paid',
+    rating: 'A'
+  },
+  {
+    _id: 5,
+    supplier_name: 'Kerala Green Farms',
+    location: 'Ernakulam, Kerala',
+    contact_no: '9954321876',
+    items_supplied: [ 'Muskmelon' ],
+    delivery_date: '2025-03-01',
+    total_quantity: '8kg',
+    payment_status: 'Paid',
+    rating: 'A'
+  }
+]
+
+CUSTOMERS DETAILS:
+QUERY:
+ db.customers.insertMany([
+   {
+     _id: 101,
+     customer_name: "Aarav Kumar",
+     location: "Bangalore",
+     contact_no: "9876501234",
+     purchase_date: "2025-03-03",
+     items_purchased: [
+       { Name_fruit: "Apple", quantity_purchased: "5kg", price_per_kg: 70 },
+       { Name_fruit: "Mango", quantity_purchased: "3kg", price_per_kg: 80 }
+     ],
+     total_amount: 5 * 70 + 3 * 80,
+     payment_mode: "UPI",
+     payment_status: "Paid"
+   },
+   {
+     _id: 102,
+     customer_name: "Priya Sharma",
+     location: "Chennai",
+     contact_no: "9823015678",
+     purchase_date: "2025-03-03",
+     items_purchased: [
+       { Name_fruit: "Muskmelon", quantity_purchased: "2kg", price_per_kg: 60 },
+       { Name_fruit: "Watermelon", quantity_purchased: "4kg", price_per_kg: 40 }
+     ],
+     total_amount: 2 * 60 + 4 * 40,
+     payment_mode: "Cash",
+     payment_status: "Paid"
+   },
+   {
+     _id: 103,
+     customer_name: "Rohan Patel",
+     location: "Mumbai",
+     contact_no: "9812012312",
+     purchase_date: "2025-03-04",
+     items_purchased: [
+       { Name_fruit: "Orange", quantity_purchased: "5kg", price_per_kg: 100 }
+     ],
+     total_amount: 5 * 100,
+     payment_mode: "Card",
+     payment_status: "Paid"
+   },
+   {
+     _id: 104,
+     customer_name: "Meena Iyer",
+     location: "Coimbatore",
+     contact_no: "9856743210",
+     purchase_date: "2025-03-05",
+     items_purchased: [
+       { Name_veg: "Tomato", quantity_purchased: "5kg", price_per_kg: 40 },
+       { Name_veg: "Onion", quantity_purchased: "3kg", price_per_kg: 60 }
+     ],
+     total_amount: 5 * 40 + 3 * 60,
+     payment_mode: "UPI",
+     payment_status: "Paid"
+   }
+ ])
+
+db.customers.find()
+[
+  {
+    _id: 101,
+    customer_name: 'Aarav Kumar',
+    location: 'Bangalore',
+    contact_no: '9876501234',
+    purchase_date: '2025-03-03',
+    items_purchased: [
+      {
+        Name_fruit: 'Apple',
+        quantity_purchased: '5kg',
+        price_per_kg: 70
+      },
+      {
+        Name_fruit: 'Mango',
+        quantity_purchased: '3kg',
+        price_per_kg: 80
+      }
+    ],
+    total_amount: 590,
+    payment_mode: 'UPI',
+    payment_status: 'Paid'
+  },
+  {
+    _id: 102,
+    customer_name: 'Priya Sharma',
+    location: 'Chennai',
+    contact_no: '9823015678',
+    purchase_date: '2025-03-03',
+    items_purchased: [
+      {
+        Name_fruit: 'Muskmelon',
+        quantity_purchased: '2kg',
+        price_per_kg: 60
+      },
+      {
+        Name_fruit: 'Watermelon',
+        quantity_purchased: '4kg',
+        price_per_kg: 40
+      }
+    ],
+    total_amount: 280,
+    payment_mode: 'Cash',
+    payment_status: 'Paid'
+  },
+  {
+    _id: 103,
+    customer_name: 'Rohan Patel',
+    location: 'Mumbai',
+    contact_no: '9812012312',
+    purchase_date: '2025-03-04',
+    items_purchased: [
+      {
+        Name_fruit: 'Orange',
+        quantity_purchased: '5kg',
+        price_per_kg: 100
+      }
+    ],
+    total_amount: 500,
+    payment_mode: 'Card',
+    payment_status: 'Paid'
+  },
+  {
+    _id: 104,
+    customer_name: 'Meena Iyer',
+    location: 'Coimbatore',
+    contact_no: '9856743210',
+    purchase_date: '2025-03-05',
+    items_purchased: [
+      {
+        Name_veg: 'Tomato',
+        quantity_purchased: '5kg',
+        price_per_kg: 40
+      },
+      {
+        Name_veg: 'Onion',
+        quantity_purchased: '3kg',
+        price_per_kg: 60
+      }
+    ],
+    total_amount: 380,
+    payment_mode: 'UPI',
+    payment_status: 'Paid'
+  }
+]
