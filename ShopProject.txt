@@ -299,3 +299,90 @@ db.customers.find()
     payment_status: 'Paid'
   }
 ]
+
+INVENTORY COLLECTION:
+db.inventory.insertMany([
+   {
+     _id: 201,
+     Name_fruit: "Apple",
+     initial_stock: "20kg",
+     sold_quantity: "5kg",
+     remaining_stock: "15kg",
+     price_per_kg: 70,
+     location: "Kashmir",
+     last_updated: "2025-03-03"
+   },
+   {
+     _id: 202,
+     Name_fruit: "Apple2",
+     initial_stock: "15kg",
+     sold_quantity: "0kg",
+     remaining_stock: "15kg",
+     price_per_kg: 50,
+     location: "Gujarat",
+     last_updated: "2025-03-01"
+   },
+   {
+     _id: 203,
+     Name_fruit: "Orange",
+     initial_stock: "10kg",
+     sold_quantity: "5kg",
+     remaining_stock: "5kg",
+     price_per_kg: 100,
+     location: "Odisaa",
+     last_updated: "2025-03-04"
+   },
+   {
+     _id: 204,
+     Name_fruit: "Mango",
+     initial_stock: "15kg",
+     sold_quantity: "3kg",
+     remaining_stock: "12kg",
+     price_per_kg: 80,
+     location: "Salem",
+     last_updated: "2025-03-03"
+   },
+   {
+     _id: 205,
+     Name_fruit: "Muskmelon",
+     initial_stock: "8kg",
+     sold_quantity: "2kg",
+     remaining_stock: "6kg",
+     price_per_kg: 60,
+     location: "Kerala",
+     last_updated: "2025-03-03"
+   },
+   {
+     _id: 206,
+     Name_fruit: "Watermelon",
+     initial_stock: "18kg",
+     sold_quantity: "4kg",
+     remaining_stock: "14kg",
+     price_per_kg: 40,
+     location: "TN",
+     last_updated: "2025-03-03"
+   },
+   {
+     _id: 207,
+     Name_veg: "Tomato",
+     initial_stock: "10kg",
+     sold_quantity: "5kg",
+     remaining_stock: "5kg",
+     price_per_kg: 40,
+     location: "TN",
+     last_updated: "2025-03-05"
+   },
+   {
+     _id: 208,
+     Name_veg: "Onion",
+     initial_stock: "10kg",
+     sold_quantity: "3kg",
+     remaining_stock: "7kg",
+     price_per_kg: 60,
+     location: "TN",
+     last_updated: "2025-03-05"
+   }
+ ])
+
+PROFIT COLLECTION:
+
