@@ -154,7 +154,7 @@
     production_founded_year: 'production_details.founded_year',
     production_headquartes: 'production_details.headquarters'
   }
-]
+]  
 
 
 
